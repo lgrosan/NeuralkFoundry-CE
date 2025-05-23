@@ -1,0 +1,34 @@
+name: 'test'
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - '*'
+  schedule:
+    - cron: "30 2 * * *"
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+        environment: [
+          min
+        ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: prefix-dev/setup-pixi@v0.8.8
+        with:
+          pixi-version: v0.41.3
+          environments: ${{ matrix.environment }}
+          # we can freeze the environment and manually bump the dependencies to the
+          # latest version time to time.
+          frozen: true
+
+      - name: Run tests
+        run: pixi run -e ${{ matrix.environment }} test
+
