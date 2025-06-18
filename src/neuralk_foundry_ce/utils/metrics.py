@@ -532,7 +532,7 @@ class JaccardSimilarity(Metric):
 def is_duplicated(arr):
     unique, counts = np.unique(arr, return_counts=True)
     duplicates = unique[counts > 1]
-    return np.in1d(arr, duplicates)
+    return np.isin(arr, duplicates)
 
 
 class GroupDetectionPrecision(Metric):
