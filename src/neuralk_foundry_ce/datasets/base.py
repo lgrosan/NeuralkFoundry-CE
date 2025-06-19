@@ -230,9 +230,8 @@ class LocalDataConfig(BaseDataConfig):
         AssertionError
             If the configuration does not define a 'target' attribute.
         """
-        assert(hasattr(self.config, 'target'))
         data = load_dataframe(Path(self.file_path))
-        return data, self.config['target']
+        return data, self.target
 
 
 class DownloadDataConfig(BaseDataConfig):
