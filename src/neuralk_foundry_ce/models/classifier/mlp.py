@@ -117,7 +117,6 @@ class MLPClassifier(ClassifierModel):
 
     def train(self, X, y, split_mask, splits):
         import torch
-        from sklearn.preprocessing import LabelEncoder
         from torch.utils.data import DataLoader, TensorDataset
 
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -238,6 +237,8 @@ class MLPClassifier(ClassifierModel):
 
         del self.model
         self.model = None
-        torch.cuda.empty_cache()
-        torch.cuda.ipc_collect()
+
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            torch.cuda.ipc_collect()
 

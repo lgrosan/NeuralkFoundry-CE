@@ -55,8 +55,6 @@ class LightGBMClassifier(ClassifierModel):
             "metric": "binary_logloss" if is_binary else "multi_logloss",
             "verbose": -1,
         }
-        if torch.cuda.is_available() and False:
-            params['device'] = 'gpu'
         return params
 
 
